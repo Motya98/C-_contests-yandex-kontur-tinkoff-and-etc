@@ -1,4 +1,4 @@
-class Program
+class Program // Завал после 20+ тестов
 {
     static void Main()
     {

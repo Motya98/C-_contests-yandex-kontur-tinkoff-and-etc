@@ -29,8 +29,7 @@ class Program
                 break;
         }
         var arraySpanLenght = endSpanIndex - startSpanIndex + 1;
-        Span<char> arraySpan = array;
-        Span<char> arraySpanMiddle = arraySpan.Slice(startSpanIndex, arraySpanLenght);
+        ReadOnlySpan<char> arraySpanMiddle = array.AsSpan().Slice(startSpanIndex, arraySpanLenght);
         var countNollInSpan = 0;
         var counOneInSpan = 0;
         foreach (var i in arraySpanMiddle)
@@ -43,12 +42,12 @@ class Program
 
         if (controlExistOne == true)
         {
-            if (countNollInSpan < counOneInSpan)
+            if (countNollInSpan <= counOneInSpan)
                 Console.WriteLine(countNollInSpan);
             else
                 Console.WriteLine(counOneInSpan);
         }
         else
-            Console.WriteLine(1);
+            Console.WriteLine(0);
     }
 }

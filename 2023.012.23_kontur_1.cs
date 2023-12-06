@@ -1,4 +1,4 @@
-class Program
+class Program // 10/10
 {
     public static void Main(string[] args)
     {

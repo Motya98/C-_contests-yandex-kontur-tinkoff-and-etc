@@ -1,4 +1,4 @@
-class Program
+class Program // завал на 13 тесте. 0/10
 {
     public static void Main(string[] args)
     {
